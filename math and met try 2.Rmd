@@ -1,0 +1,6 @@
+---
+title: mat and meth try 2
+output: html_notebook
+---
+Methods and materials
+Datasets relating to world fertility and percentage of females enrolled in secondary school was downloaded from The World Bank.org (ref). Datasets were subsequently cleaned and converted into a csv file in Microsoft excel. The datasets contained the percentage of females enrolled in secondary school and average number of children per woman of 151 different countries across the world. The cleaned data was subsequently transferred to the application ‘Rstudio’ where the package ‘tidyverse’ was already loaded in order to read the data. The data was renamed to ‘Secondary’ in order to make it easier for future use. A graph comparing the average number of children born per woman and the percentage of females enrolled in secondary of each country was plotted using the ‘ggplot’ function in the package ‘tidyverse’. The command ‘geom_smooth’ was used to see show whether there was a negative or positive trend in the data.
