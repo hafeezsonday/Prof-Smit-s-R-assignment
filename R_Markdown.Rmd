@@ -1,34 +1,32 @@
 ---
-title: The influence of female secondary school enrolment on total fertility rate
-  at the global and country level
+title: "The influence of female secondary school enrolment on the total fertility rate of a population"
 author: "Tauriq Jamalie (3437177), Adnaan Emandien (3540482), Hafeez Sonday (3440252)"
-date: "29 June 2018"
+date: "Department of Biodiversity and Conservation Biology, University of the Western Cape,Robert Sobukwe Rd, Bellville, Cape Town, 7535"
 output:
   html_document:
     df_print: paged
 monofont: PT Mono
 mainfot: Ariel
 fontsize: 11pt
+margin: 2.5cm
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
-#Abstract
+##Abstract
 
 According to recent studies, overpopulation is heavily related to total fertility rates in the country which in turn affects economic development. The purpose of the study undertaken was to prove whether or not the percentage of secondary school enrolment of females decreases the total fertility rates both globally and at a country specific level, for Kenya. The data was collected from The World Bank and UNESCO websites and was cleaned to be used in Rstudio. Two regression graphs were produced showing a correlation between the percentage of females enrolled in secondary school and total fertility rates. The results concluded that global and country-specific data showed that with the increase of female enrolment in secondary school results in a decrease of total fertility rates. 
 
-#Introduction
+##Introduction
 
 Does female secondary school education lower fertility? This is an important question as both education and total fertility rates are considered important processes for economic development especially in countries transitioning from developing to developed (Chisadza & Bittencourt, 2015). The effect of education on fertility is complex and has been studied extensively. The topic is highly relevant in research on reproductive behaviour (Testa, 2014).
 
-Modern developed economies are typically characterized by increased human capital accumulation, decreased fertility rates as well as high levels of productivity (Chisadza & Bittencourt, 2015). Previous studies on secondary education levels have shown a consistent negative relationship with fertility (Chisadza & Bittencourt, 2015). This has been strongly observed across regions and time (Kim, 2016). Previous studies indicate that higher levels of education are significant in reducing fertility within a region (Chisadza & Bittencourt, 2015). These studies provide evidence for economies that are entering their own demographic transitions in moving from stagnation to economic growth (Chisadza & Bittencourt, 2015). A woman’s education level may affect fertility via its impact on a woman’s health in conjunction with its impact on a woman’s physical capacity to give birth. Furthermore, a woman’s education level could affect fertility through its impact on children’s health, the number of children desired as well as a woman’s ability to effectively plan families and knowledge on birth control methods (Kim, 2016). These mechanisms are dependent on the individual’s circumstances as well as the circumstances experienced by the institution and country. 
+Modern developed economies are typically characterized by increased human capital accumulation, decreased fertility rates as well as high levels of productivity (Chisadza & Bittencourt, 2015). Previous studies on secondary education levels have shown a consistent negative relationship with fertility (Chisadza & Bittencourt, 2015). This has been strongly observed across regions and time (Kim, 2016). Previous studies indicate that higher levels of education are significant in reducing fertility within a region (Chisadza & Bittencourt, 2015). These studies provide evidence for economies that are entering their own demographic transitions in moving from stagnation to economic growth that focussing on education policies reforms are pertinent in reducing the countries total fertility rate and ultimatly the population (Chisadza & Bittencourt, 2015). A womans education level may affect fertility via its impact on a womans health in conjunction with its impact on a womans physical capacity to give birth. Furthermore, a womans education level could affect fertility through its impact on childrens health, the number of children desired as well as a womans ability to effectively plan families and their knowledge on birth control methods (Kim, 2016). These mechanisms are dependent on the individuals circumstances as well as the circumstances experienced by the institution and country.
 
-Within modern societies several explanations have been reviewed in triggering the decline in fertility rates (Chisadza & Bittencourt, 2015). Consider the Barro-Becker theory that focuses on the opportunity costs that’s involved with the growing income per capita which may cause parents to substitute the quantity of children for higher quality (Chisadza & Bittencourt, 2015). The unified growth theory emphasizes technologies role in encouraging the investments in children’s education (Chisadza & Bittencourt, 2015). The decrease in the gender gap which ultimately raises the cost of children may also account for the results attained (Chisadza & Bittencourt, 2015). There may also be a shift in traditions with regards to the old-age security hypothesis that deems younger generations a security measure for older generations (Chisadza & Bittencourt, 2015). Finally, mortality rates are declining- this reduces the need to conceive more children as there is less requirement to replace offspring that do not survive (Chisadza & Bittencourt, 2015).
+Within developed societies several explanations have been reviewed in triggering the decline in fertility rates (Chisadza & Bittencourt, 2015). Consider the Barro-Becker theory that focuses on the opportunity costs that are involved with the growing income per capita which may cause parents to substitute the quantity of children for higher quality of living(Chisadza & Bittencourt, 2015). The unified growth theory emphasizes technologies role in encouraging the investments in children?s education (Chisadza & Bittencourt, 2015). The decrease in the gender gap which ultimately raises the cost of children may also account for the results attained (Chisadza & Bittencourt, 2015). There may also be a shift in traditions with regards to the old-age security hypothesis that deems younger generations a security measure for older generations (Chisadza & Bittencourt, 2015). Finally, mortality rates are declining in developed societies- this reduces the need to conceive more children as there is less requirement to replace offspring that do not survive (Chisadza & Bittencourt, 2015). Differences in fertility decline timings gave rise to the difference in the take-off of demographic transitions which subsequently led to the variation in the levels of economic development which may be observed between developing economies and developed economies (Chicoine, 2012). How a country may use education policy reform to reduce their total fertility rate in an effort shift from developing economy to developed can be oberved with Kenya. Over the last 30 years Kenya has experienced one of the most dramatic changes in fertility (Chicoine, 2012). Kenyas total fertility rate has been declining annually haven fell from an average of 8.1 births per woman in the 70s to an average of 4.6 births per woman recorded in a study conducted in 2008 (Chicoine, 2012). Despite the decline in Kenyas total fertility rate, fertility level are still high (Chicoine, 2012). This is characterized by the high population rate which has of 2008 increased by 3 %. Thus lowering the fertility levels in Kenya has been a priority for the Kenyan government (Chicoine, 2012).
 
-Differences in fertility decline timings gave rise to the difference in take-offs of the demographic transitions which subsequently led to the variation in the levels of economic development which may be observed between developing economies and developed economies.   
-
-The null hypothesis states that female secondary school enrolment will have no effect on total fertility rate of a population, while the alternative hypothesis states that female secondary education enrolment will influence total fertility rate of a population. The aim of this assignment is to examine the influence female secondary school enrolment has on total fertility rate at both the global and country level using the latest available data. 
+Where the have been previous studies on the negative correlation between female secondary school enrolment and total fertility rate, as of 2018 the data remains outdated. There are a limited number of papers depicting updated trends on this mechanism for both Kenya and the world. Thus the aim of this study is to examine the influence female secondary school enrolment has on total fertility rate at both the global and country level (focusing on Kenya) using the latest available data. The null hypothesis states that female secondary school enrolment does not influence the total fertility rate of a population, while the alternative hypothesis states that female secondary education enrolment will influence the total fertility rate of a population. 
 
 #Methods and Materials
 
@@ -51,7 +49,8 @@ Datasets relating to worldwide fertility and percentage of females enrolled in s
 The assumptions for this data were checked. Specifically whether the the dependent variable was continuous,
 the observations in the groups being compared were independent of each other, the data are normally distributed, and that the data are homoscedastic, and that there are no outliers. Normality and homoscedasticity was checked using the Shapiro-Wilk test and variance.  This was done using the code below:
 
-###Normality and Homoscedasticity of Global Data
+#####**Normality and Homoscedasticity of Global Data**
+
 ```{r}
 #shapiro.test(Global_correlation$Percent_enrolled)
 #shapiro.test(Global_correlation$TFR)
@@ -59,7 +58,8 @@ the observations in the groups being compared were independent of each other, th
 #var(Global_correlation$Percent_enrolled)
 ```
 
-###Normality and Homoscedasticity of Kenya Data
+#####**Normality and Homoscedasticity of Kenya Data**
+
 ```{r}
 #shapiro.test(kenya_combo$Percent_enrollment)
 #shapiro.test(kenya_combo$TFR)
@@ -75,14 +75,14 @@ The function ‘coefficients’ was used in order to extract model coefficients 
 
 Finally, a correlation test using Kendall’s rank correlation tau was performed for the percentage of females enrolled in secondary school and fertility rate of the global data using the ‘cor.test’ function. Similarly a Pearsons test was done on the Kenya data. This code can be seen below.
 
-###Simple linear regression of global data
+#####**Simple linear regression of global data**
 
 ```{r}
 #Global.lm <- lm(Percent_enrolled ~ TFR, data = Global_correlation)
 #summary(Global.lm)
 ```
 
-###A graph of the linear regression of the global data
+#####**A graph of the linear regression of the global data**
 
 ```{r}
 #slope <- round(Global.lm$coef[2], 3)
@@ -99,20 +99,20 @@ Finally, a correlation test using Kendall’s rank correlation tau was performed
 #       caption = "Figure 1: The negative correlation between female secondary education enrollment (%) and #total fertitlity rate")
 ```
 
-###Kendall Correlation of the global data
+#####**Kendall Correlation of the global data**
 
 ```{r}
 #cor.test(Global_correlation$Percent_enrolled, Global_correlation$TFR, method = "kendall")
 ```
 
-###Simple linear regression of the Kenya data
+#####**Simple linear regression of the Kenya data**
 
 ```{r}
 #Kenya.lm <- lm(Percent_enrollment ~ TFR, data = kenya_combo)
 #summary(Kenya.lm)
 ```
 
-###A graph of the linear regression of the Kenya data
+#####**A graph of the linear regression of the Kenya data**
 
 ```{r}
 #slope <- round(Kenya.lm$coef[2], 3)
@@ -129,17 +129,18 @@ Finally, a correlation test using Kendall’s rank correlation tau was performed
 #       caption = "Figure 2: The negative correlation between female secondary education enrollment (%) and #total fertitlity rate in Kenya from 1999 to 2009")
 ```
 
-###Pearsons Correlation of the Kenya data
+#####**Pearsons Correlation of the Kenya data**
 
 ```{r}
 #cor.test(kenya_combo$Percent_enrollment, kenya_combo$TFR, use = "everything", method = "pearson")
 ```
 
-#Results
+##Results
 
-Both tests revealed a p-value less than 0.05 (alpha <0.05), indicating that at a global level the data is not normally distributed. However, at a country level i.e. Kenya, the Shapiro-Wilk tests revealed a p-value of 0.23 for percentage of females enrolled in secondary education and 0.88 for Kenya's fertility rate, indicating that the country level dataset is in fact normally distributed. this can be seen below.
+Both tests revealed a p-value less than 0.05 (alpha <0.05), indicating that at a global level the data is not normally distributed. However, at a country level i.e. Kenya, the Shapiro-Wilk tests revealed a p-value of 0.23 for percentage of females enrolled in secondary education and 0.88 for Kenya's fertility rate, indicating that the country level dataset is in fact normally distributed. this can be seen below. The test divulged a tau value of 0.53 indicating the presence of a relationship between the two aforementioned variables. Whether the relationship is negative or positive is irrelevant. The data were then subjected to a regression analysis. What is important to note here is that the results display an r² value of 0.72, indicative of a very strong relationship between the two variables again.
 
-###Normality of the avergage number of children per woman within the Global Data
+#####**Normality of the percent of females endrolled in secondary education in the Global Data**
+
 ```{r include=FALSE}
 library(tidyverse)
 library(ggpubr)
@@ -152,40 +153,52 @@ kenya_combo <- read.csv('Kenya_combo.csv')
 
 shapiro.test(Global_correlation$Percent_enrolled)
 ```
-###Normality of the avergage number of children per woman within the Global Data
+
+#####**Normality of the avergage number of children per woman within the Global Data**
+
 ```{r echo=FALSE}
 shapiro.test(Global_correlation$TFR)
 ```
 
-###The Homoscedasticity of the percent of females endrolled in secondary education in the Global Data
+#####**The Homoscedasticity of the percent of females endrolled in secondary education in the Global Data**
+
 ```{r echo=FALSE}
 #Percent of females endrolled in secondary education
 var(Global_correlation$Percent_enrolled)
 ```
-###The Homoscedasticity of the avergage number of children per woman the Global Data
+
+#####**The Homoscedasticity of the avergage number of children per woman the Global Data**
+
 ```{r echo=FALSE}
 var(Global_correlation$TFR)
 ```
 
-###Normality of the avergage number of children per woman within the Kenya Data
+#####**Normality of the avergage number of children per woman within the Kenya Data**
+
 ```{r echo=FALSE}
 shapiro.test(kenya_combo$Percent_enrollment)
 ```
-###Normality of the avergage number of children per woman within the Kenya Data
+
+#####**Normality of the avergage number of children per woman within the Kenya Data**
+
 ```{r echo=FALSE}
 shapiro.test(kenya_combo$TFR)
 ```
-###The Homoscedasticity of the percent of females endrolled in secondary education in the Kenya Data
+
+#####**The Homoscedasticity of the percent of females endrolled in secondary education in the Kenya Data**
+
 ```{r echo=FALSE}
 var(kenya_combo$Percent_enrollment)
 ```
-###The Homoscedasticity of the avergage number of children per woman in the Kenya Data
+
+#####**The Homoscedasticity of the avergage number of children per woman in the Kenya Data**
+
 ```{r echo=FALSE}
 var(kenya_combo$TFR)
 ```
-The test divulged a tau value of 0.53 indicating the presence of a relationship between the two aforementioned variables. Whether the relationship is negative or positive is irrelevant. The data were then subjected to a regression analysis. What is important to note here is that the results display an r² value of 0.72, indicative of a very strong relationship between the two variables again.
 
-###Simple linear regression of global data
+#####**Simple linear regression of global data**
+
 ```{r echo=FALSE}
 Global.lm <- lm(Percent_enrolled ~ TFR, data = Global_correlation)
 summary(Global.lm)
@@ -194,12 +207,15 @@ slope <- round(Global.lm$coef[2], 3)
 p.val = 0.001
 r2 <- round(summary(Global.lm)$r.squared, 3)
 ```
-###Kendall Correlation of the global data
+
+#####**Kendall Correlation of the global data**
+
 ```{r echo=FALSE}
 cor.test(Global_correlation$Percent_enrolled, Global_correlation$TFR, method = "kendall")
 ```
 
-###Simple linear regression of the Kenya data
+#####**Simple linear regression of the Kenya data**
+
 ```{r echo=FALSE}
 Kenya.lm <- lm(Percent_enrollment ~ TFR, data = kenya_combo)
 summary(Kenya.lm)
@@ -208,12 +224,14 @@ slope <- round(Kenya.lm$coef[2], 3)
 p.val = 0.001
 r2 <- round(summary(Kenya.lm)$r.squared, 3)
 ```
-###Pearsons Correlation of the Kenya data
+
+#####**Pearsons Correlation of the Kenya data**
+
 ```{r echo=FALSE}
 cor.test(kenya_combo$Percent_enrollment, kenya_combo$TFR, use = "everything", method = "pearson")
 ```
 
-#Discussion
+##Discussion
 
 In this study we have shown that education does indeed have an effect on total fertility rates, in that as the percentage of females enrolled in secondary education (FESE) increases so the total fertility rate (TFR) decreases. This is true at both a global level as well as a country specific level as was demonstrated. However, as can be seen in figure one and two the strength of the relationship between the two variables, FESE and TFR differ. This is to be expected as the global data includes a wider range whereas at a country level populations are much smaller. Nevertheless the degree of correlation is still highly profound. 
 
@@ -221,12 +239,12 @@ In 2014, Manoel Bittencourt of the University of Pretoria conducted a similar st
 
 A sustainable growth system does sound appealing but how can one enforce the attainment of education? Consider the case of the Kenyan educational reform of 1985 where the government added an extra year before being suitable to earn the certificate of primary education. With Kenya’s independence from colonialism, came the need for an educational reform mainly due to the fact that prior to its independence the Kenyan education system was extremely basic and lacked substantial content that promotes widespread sustainable employment (Wanjohi, 2011). In 2012, Chicoine conducted a study targeting data collected during the time of this reform as well as post reform data in which he tested its effect on fertility rates. Much like Bittencourt as well as the results related to the present study, he concluded that as a result of an additional one year to primary education, a significant decrease in total fertility rate was observed as a result of postponed marriage and sexual activity, hence increased schooling can have a positive effect on choices and decision making of young women. Indicating the validity of this method in terms of a solution in mitigate an increasing population size. 
 
-#Conclusion
+##Conclusion
 
 The results from the study conclude that the total fertility rate of the selected 151 countries is directly correlated with the percentage of females enrolled in secondary school of the specific countries. The resulting decrease in fertility rate of a country from the increase in percentage of females enrolled in secondary school is especially evident in Kenya where an extra year is added to secondary school thus further lowering the total fertility rate of the country.
 
 
-#References
+##References
 
 Basu AM. 2002. Why does Education Lead to Lower Fertility? A Critical Review of Some of the Possibilities. World Development 30: 1779-1790.
 
