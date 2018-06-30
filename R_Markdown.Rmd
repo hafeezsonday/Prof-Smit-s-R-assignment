@@ -226,6 +226,7 @@ r2 <- round(summary(Kenya.lm)$r.squared, 3)
 ```
 
 #####**Pearsons Correlation of the Kenya data**
+A Pearson’s product-moment correlation analysis was conducted on the Kenyan dataset as the Shapiro-Wilk test revealed that the data was normally distributed. The test then confirmed that there is indeed a significant difference between percentage of females enrolled in secondary education and total fertility rate denoted by a p-value of <0.05.
 
 ```{r echo=FALSE}
 cor.test(kenya_combo$Percent_enrollment, kenya_combo$TFR, use = "everything", method = "pearson")
