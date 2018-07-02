@@ -43,7 +43,6 @@ Datasets relating to worldwide fertility and percentage of females enrolled in s
 #kenya_combo <- read.csv('Kenya_combo.csv')
 ```
 
-
 ##Assumptions
 
 The assumptions for this data were checked. Specifically whether the the dependent variable was continuous,
